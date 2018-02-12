@@ -288,7 +288,8 @@ T.Control {
      * @param idx the depth of the page we want
      */
     function get(idx) {
-        return pagesLogic.get(idx).page;
+        var pageWrapper = pagesLogic.get(idx)
+        return pageWrapper ? pageWrapper.page : null;
     }
 
     /**
