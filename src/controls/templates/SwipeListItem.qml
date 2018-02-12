@@ -314,7 +314,7 @@ T2.ItemDelegate {
     }
     Connections {
         id: swipeFilterConnection
-        readonly property QtObject swipeFilterItem: (behindItem.view && behindItem.view && behindItem.view.parent && behindItem.view.parent.parent) ? behindItem.view.parent.parent._swipeFilter : null
+        readonly property QtObject swipeFilterItem: (behindItem.view && behindItem.view && behindItem.view.parent && behindItem.view.parent.parent && behindItem.view.parent.parent._swipeFilter) ? behindItem.view.parent.parent._swipeFilter : null
         readonly property bool enabled: swipeFilterItem ? swipeFilterItem.currentItem === listItem : false
         target: enabled ? swipeFilterItem : null
         onPeekChanged: listItem.background.x = -(listItem.background.width - listItem.background.height) * swipeFilterItem.peek
